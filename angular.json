@@ -55,7 +55,7 @@
                 "input": "projects/ngx-toaster-next-sample-app/public"
               }
             ],
-            "styles": ["dist/ngx-toaster-next/toaster.css", "projects/ngx-toaster-next-sample-app/src/styles.scss"]
+            "styles": ["node_modules/ngx-toaster-next/toaster.css", "projects/ngx-toaster-next-sample-app/src/styles.scss"]
           },
           "configurations": {
             "production": {
