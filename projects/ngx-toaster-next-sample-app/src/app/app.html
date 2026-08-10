@@ -1,0 +1,68 @@
+<main class="showcase">
+  <header>
+    <h1>ngx-toaster-next showcase</h1>
+    <p>Bottom-right toasts with ngx-toastr-derived presentation.</p>
+  </header>
+
+  <section class="panel" aria-labelledby="content-heading">
+    <h2 id="content-heading">Content</h2>
+    <label>
+      Message
+      <input type="text" [value]="message()" (input)="message.set($any($event.target).value)" />
+    </label>
+    <label>
+      Title (optional)
+      <input type="text" [value]="title()" (input)="title.set($any($event.target).value)" />
+    </label>
+    <label>
+      Override timeOut (ms, blank = category default, 0 = sticky)
+      <input
+        type="number"
+        min="0"
+        [value]="overrideTimeOut()"
+        (input)="overrideTimeOut.set($any($event.target).value)"
+      />
+    </label>
+  </section>
+
+  <section class="panel" aria-labelledby="actions-heading">
+    <h2 id="actions-heading">Show</h2>
+    <div class="row">
+      <button type="button" class="success" (click)="show('success')">Success</button>
+      <button type="button" class="error" (click)="show('error')">Error</button>
+      <button type="button" class="info" (click)="show('info')">Info</button>
+      <button type="button" class="warning" (click)="show('warning')">Warning</button>
+    </div>
+    <div class="row">
+      <button type="button" (click)="showSticky()">Sticky success</button>
+      <button type="button" (click)="showHtmlSample()">HTML sample</button>
+      <button type="button" (click)="showDuplicatePair()">Duplicate pair</button>
+      <button type="button" class="danger" (click)="clearAll()">Clear all</button>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="flags-heading">
+    <h2 id="flags-heading">Live flags</h2>
+    <p>
+      <code>enableHtml</code> is passed per invocation. <code>preventDuplicates</code> updates the
+      live library config.
+    </p>
+    <div class="row">
+      <button type="button" [attr.aria-pressed]="enableHtml()" (click)="toggleEnableHtml()">
+        enableHtml: {{ enableHtml() ? 'on' : 'off' }}
+      </button>
+      <button
+        type="button"
+        [attr.aria-pressed]="preventDuplicates()"
+        (click)="togglePreventDuplicates()"
+      >
+        preventDuplicates: {{ preventDuplicates() ? 'on' : 'off' }}
+      </button>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="config-heading">
+    <h2 id="config-heading">Active config</h2>
+    <pre>{{ activeConfig() | json }}</pre>
+  </section>
+</main>
