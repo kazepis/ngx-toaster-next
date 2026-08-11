@@ -16,6 +16,15 @@ npm install ngx-toaster-next
 
 [**Try the live demo**](https://kazepis.github.io/ngx-toaster-next/) — see every toast type, timeout behavior, sticky notifications, and configuration options in the browser.
 
+---
+
+> ### Related projects
+> Building an Angular app with Bootstrap-style dialogs too? Check out **[ngx-modalieur](https://github.com/kazepis/ngx-modalieur)** — reactive, typed Bootstrap modals built on Angular CDK Dialog.
+> Both libraries target Angular 22 and keep their APIs intentionally focused: use `ngx-modalieur` when you need a user decision or structured interaction, and `ngx-toaster-next` when you just need to tell the user what happened.
+> Contributions, bug reports, and ideas are welcome in both projects.
+
+---
+
 ## Table of contents
 
 - [ngx-toaster-next](#ngx-toaster-next)
